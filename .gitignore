@@ -1,0 +1,15 @@
+# Node modules
+node_modules/
+
+# Build files
+dist/
+build/
+
+# npm cache
+.npm/
+
+# Lock files (optional, but usually recommended for consistency)
+package-lock.json
+
+# Tailwind cache
+.tailwind/

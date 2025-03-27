@@ -3,63 +3,93 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sample Single Page</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      background-color: #f4f4f9;
-      color: #333;
-    }
-    header {
-      background-color: #000000;
-      color: white;
-      padding: 1rem;
-      text-align: center;
-    }
-    .container {
-      padding: 2rem;
-      max-width: 800px;
-      margin: 0 auto;
-    }
-    button {
-      background-color: #4CAF50;
-      color: white;
-      padding: 10px 20px;
-      border: none;
-      border-radius: 4px;
-      cursor: pointer;
-      transition: background 0.3s ease;
-    }
-    button:hover {
-      background-color: #45a049;
-    }
-  </style>
+  <title>Techy Bootstrap Site</title>
+  <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-  <header>
-    <h1>Welcome to My Page</h1>
-  </header>
-
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <div class="container">
-    <h2>About</h2>
-    <p>This is a simple single-page HTML document. It demonstrates basic HTML structure with some CSS styling and a simple button interaction using JavaScript.</p>
-    
-    <h2>Don't click the Button!</h2>
-    <button onclick="showMessage()">Don't Click Me</button>
-    
-    <p id="message"></p>
+    <a class="navbar-brand" href="#">TechSite</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="#features">Features</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+      </ul>
+    </div>
   </div>
+</nav>
 
-  <script>
-    function showMessage() {
-      document.getElementById("message").textContent = "BUGO MAN SIGURO KA!!! AYAW E CLICK!";
-    }
-  </script>
+<!-- Hero Section -->
+<section class="hero text-center text-white">
+  <div class="container">
+    <h1 class="display-4">Welcome to TechSite</h1>
+    <p class="lead">Innovating the future, one line of code at a time.</p>
+    <a href="#features" class="btn btn-primary btn-lg mt-3">Learn More</a>
+  </div>
+</section>
 
+<!-- Features Section -->
+<section id="features" class="py-5">
+  <div class="container">
+    <div class="row text-center">
+      <div class="col-md-4">
+        <div class="icon-box">
+          <i class="bi bi-code-slash fs-1 text-primary"></i>
+          <h3 class="mt-3">Clean Code</h3>
+          <p>Write elegant, maintainable code with best practices.</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="icon-box">
+          <i class="bi bi-shield-lock fs-1 text-primary"></i>
+          <h3 class="mt-3">Secure</h3>
+          <p>Security is our top priority with the latest encryption.</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="icon-box">
+          <i class="bi bi-rocket fs-1 text-primary"></i>
+          <h3 class="mt-3">Performance</h3>
+          <p>Optimized for speed and high performance.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact" class="bg-light py-5">
+  <div class="container">
+    <h2 class="text-center">Contact Us</h2>
+    <form class="mt-4">
+      <div class="mb-3">
+        <label for="name" class="form-label">Name</label>
+        <input type="text" class="form-control" id="name" placeholder="Enter your name">
+      </div>
+      <div class="mb-3">
+        <label for="email" class="form-label">Email address</label>
+        <input type="email" class="form-control" id="email" placeholder="Enter your email">
+      </div>
+      <div class="mb-3">
+        <label for="message" class="form-label">Message</label>
+        <textarea class="form-control" id="message" rows="3" placeholder="Your message..."></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary">Send</button>
+    </form>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="text-center py-3 bg-dark text-white">
+  <p>&copy; 2025 TechSite. All Rights Reserved.</p>
+</footer>
+
+<script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
-
